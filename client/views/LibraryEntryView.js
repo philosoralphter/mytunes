@@ -7,23 +7,11 @@ var LibraryEntryView = Backbone.View.extend({
 
   events: {
     'click': function() {
-    this.model.play();
-    this.model.enqueue();
+      this.model.enqueue();
     }
   },
 
   render: function(){
     return this.$el.html(this.template(this.model.attributes));
   }
-
 });
-
-
-
-
-  // var player = $('audio')[0];
-  // if((player.paused && player.currentTime === 0) || player.ended){
-  //   this.model.play();
-  // } else {
-  //   this.model.enqueue();
-  // }
