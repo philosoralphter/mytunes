@@ -16,11 +16,12 @@ initialize: function(){
     console.log(song);
   },
 
-  playFirst: function(song){
-    this.play(song);
+  playFirst: function(){
+    this.at(0).play();
   },
 
   ended: function(song){
+    this.playFirst();
     this.dequeue(song);
   }
 
